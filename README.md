@@ -18,7 +18,7 @@ O time de N3 dentro do suporte técnico tem como principal objetivo resolver cha
 
 Este desafio técnico é uma atividade prática, onde avaliaremos seus conhecimentos de lógica de programação, banco de dados e html, assuntos que precisará utilizar diariamente para a função de agente de suporte N3.
 
-- Linguagens: PHP
+- Linguagens: PHP 5.6
 - Framework: Laravel
 - Banco de dados: Postgres
 
@@ -104,6 +104,8 @@ $ php artisan serve
 ## Entrega
 Para entregar sua solução, baixe este projeto e resolva os 3 desafios propostos.
 
-Assim que finalizar, suba a sua solução para o github e nos envie o link.
+Assim que finalizar, suba a sua solução para o github e nos envie o link do seu repositório.
+
+Ps: não é necessário commitar ou enviar pull request para este repositório. Somente enviar o link do seu repositório no formulário do desafio.
 
 Em caso de dúvida, não hesite em nos contatar através do e-mail recebido ou para lorena@proesc.com :)
