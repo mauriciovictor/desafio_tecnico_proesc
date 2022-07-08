@@ -1,6 +1,6 @@
 select 
     c.name,
-    count(*)
+    count(*) total_products
 from 
     products  p inner join
     categories c on
