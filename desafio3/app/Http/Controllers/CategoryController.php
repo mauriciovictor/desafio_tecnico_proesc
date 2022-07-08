@@ -12,10 +12,6 @@ class CategoryController extends Controller
     public function __construct(){
         $this->objCategory = new Category();
     }
-    public function index()
-    {
-     return view('categorias-cadastrar', ['categories' => $categories] );
-    }
 
     public function listar()
     {
@@ -30,11 +26,13 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+      
         $category= $this->objCategory->create([
             'name'=>$request->name,
             'slug'=> str_slug($request->name),
             'description'=>$request->description
         ]);
+
         if($category){
             return redirect('categorias/listar');
         }
@@ -48,17 +46,18 @@ class CategoryController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $this->objCategory->where(['id' => $id])->update([
             'name'=>$request->name,
             'slug'=> str_slug($request->name),
             'description'=>$request->description
         ]);
-        return redirect('produtos/listar');
+        return redirect(route('categories.index'));
     }
  
     public function destroy($id)
     {
         $category = $this->objCategory->find($id)->delete();
-        return redirect('produtos/listar')->with('msg', 'Categoria excluída com sucesso.');
+        return redirect(route('categories.index'))->with('msg', 'Categoria excluída com sucesso.');
     }
 }

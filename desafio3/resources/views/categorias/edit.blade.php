@@ -4,7 +4,7 @@
 <br>
     <div class="col-8 m-auto">
     @if(isset($category))
-      <form name="formEdit" id="formEdit" method="POST" action="{{url("categorias/$category->id")}}">
+      <form name="formEdit" id="formEdit" method="POST" action="{{ route('categories.update', ['id' => $category->id]) }}">
         {{ method_field('PUT') }}
     @else
       <form name="formCard" id="formCard" method="POST" action="{{url('categorias/listar')}}">
@@ -18,7 +18,8 @@
               </div>
               <div class="form-group">
                 <label for="description" class="form-label mt-4">Descrição</label>
-                <textarea class="form-control" id="description" name="description" rows="3" value="{{$category->description?$category->description:''}}">
+                <textarea class="form-control" id="description" name="description" rows="3">
+                {{ trim($category->description)}}
                 </textarea>
               </div>
             </fieldset>

@@ -14,15 +14,10 @@ class ProductController extends Controller
         $this->objProduct = new Product();
     }
 
-    public function index()
-    {
-     $produtos = \App\Models\Product::all();
-     return view('produtos', ['produtos' => $produtos] );
-    } 
-
    public function listar()
    {
-    $produtos = \App\Models\Product::all();
+    $produtos = \App\Models\Product::with('category')->get();
+    // dd($produtos);
     return view('produtos', ['produtos' => $produtos] );
    }
 
