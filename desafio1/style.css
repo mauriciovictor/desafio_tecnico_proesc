@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    background: rgb(255, 255, 255);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    padding: 50px 300px;
+}
+
+.container .content {
+    font-size: 20px;
+}
+
+.container .content .text-indent{
+    text-indent: 100px;
+}
+
+.container .content p + p{
+    margin-top: 30px;
+    margin-bottom: 100px;
+} 
+
+.container .content label{
+    text-align: right;
+    width: 100%;
+    display: block;
+}
+
+.container .signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.container .signature .signature-line{
+    border-bottom: 2px solid #000 ;
+    display: inline-block;
+    height: 2px ;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.container .signature .school-name{
+    font-size: 22px;
+}
